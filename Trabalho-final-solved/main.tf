@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "fiap-cicd-tfstate-${terraform.workspace}"
-    key            = "nginx-lb/terraform.tfstate"
+    key            = "03-Count/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "tfstate-lock-${terraform.workspace}"
   }
@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 module "nginx_lb" {
-  source            = "./modules/nginx-lb"
+  source            = "./03-Count"
   instance_count    = var.instance_count
   aws_region        = var.aws_region
   aws_amis          = var.aws_amis

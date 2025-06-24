@@ -2,7 +2,7 @@
 
 ## Estrutura
 
-- `modules/nginx-lb/`: Módulo Terraform reutilizável para criar EC2s, ELB e Security Group, parametrizado por ambiente/workspace.
+- `03-Count/`: Módulo Terraform reutilizável para criar EC2s, ELB e Security Group, parametrizado por ambiente/workspace.
 - `main.tf`: Chama o módulo, define o backend remoto S3 e outputs.
 - `variables.tf`: Variáveis globais para o root module.
 
